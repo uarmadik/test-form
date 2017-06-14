@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.form-wrap {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 1em;
+
+    background-color: aliceblue;
+    box-shadow: 0px 0px 10px #999;
+}
+#testEmailForm {
+    position: relative;
+}
+    #testEmailForm input,
+    #testEmailForm textarea {
+        display: block;
+        margin: 1em 0;
+        padding: 0.5em;
+        border-radius: .5em;
+        border: none;
+        outline: none;
+
+        font-size: 1em;
+        letter-spacing: 0.05em;
+    }
+
+    #testEmailForm input[type="text"],
+     #testEmailForm textarea {
+        width: 100%;
+        background-color: #F4F4F4;
+        border: 1px solid #999;
+    }
+    #testEmailForm input[type="text"]:focus,
+    #testEmailForm textarea:focus {
+        background-color: #fff;
+    }
+    .testEmailForm textarea {
+        height: 100px;
+    }
+
+    #testEmailForm input[type="submit"] {
+        padding: .5em 1em;
+        background-color: deepskyblue;
+        box-shadow: 0px 0px 4px #444;
+        color: #ffffff;
+        font-size: 1.2em;
+        letter-spacing: .1em;
+
+
+
+    }
+    #testEmailForm input[type="submit"]:hover {
+       background-color: cornflowerblue;
+
+    }
+    #testEmailForm label {
+        margin-top: 20px;
+    }
+        #testEmailForm label span{
+            padding: .5em 1em;
+            margin: 1em 0;
+            background-color: deepskyblue;
+            box-shadow: 0px 0px 4px #444;
+            border-radius: .5em;
+            color: #ffffff;
+            font-size: 1em;
+            letter-spacing: .1em;
+        }
+        #testEmailForm label span:hover {
+            background-color: #5DA4DE;
+        }
+            #testEmailForm input[type="file"] {
+                display: none;
+            }
+
+#previewWrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: dodgerblue;
+}
+    #previewImg {
+        max-height: 70px;
+        /*max-width: 75px;*/
+
+    }

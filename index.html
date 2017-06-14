@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="En">
+<head>
+	<title>Example Email Form</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="form-wrap">
+		<form action="scripts/form-action.php" method="POST" id="testEmailForm" enctype="multipart/form-data" target="_blank">
+			<input type="text" name="email_header" placeholder="Email header">
+			<textarea name="email_content" placeholder="Email content"></textarea>
+			<label>
+				<span>Вибрати файл ...</span>
+				<input type="file" name="upload_file" onchange="loadFile(event)">
+			</label>
+			<input type="submit" name="">
+
+		</form>
+
+	</div>
+
+	<script>
+		var	path;
+        var loadFile;
+        loadFile = function (event) {
+            console.log("File uploaded");
+            path = URL.createObjectURL(event.target.files[0]);
+
+            console.log("__typeof path__ " + typeof(path));
+            console.log("__path__ " + path);
+
+			var previewWrap = document.createElement('div');
+			previewWrap.setAttribute('id','previewWrap');
+            previewWrap.innerHTML = "<p>Preview:</p>";
+            testEmailForm.appendChild(previewWrap);
+
+            var previewImg = document.createElement('img');
+            previewImg.setAttribute('id', 'previewImg');
+            previewImg.setAttribute('src', path);
+            previewWrap.appendChild(previewImg);
+
+            //document.div.appendChild(previewImg);
+
+        };
+	</script>
+
+</body>
+</html>
